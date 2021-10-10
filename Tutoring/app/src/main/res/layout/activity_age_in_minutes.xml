@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+xp란
+점을 찍을 수 있는 가장 작은 단위라고 생각하면 된다. 따라서 해상도가 높아지면 xp는 점이 더 작아지게 된다.
+
+dp란
+화면의 해상도값에 따라서 크기가 조정되는 단위다.
+160dpi 스크린 해상도에서는 1px만큼의 크기를 가지고 해상도 값이 커질수록 픽셀의 값이 커진다.
+320dpi 해상도면 2px 만큼의 크기를 가지고 480dpi 면 3px만큼 가지는 원리다
+
+
+sp란
+dp랑 비슷한 원리로 동작하며 사용자의 글짜 크기(font-size)를 조정할 때 사용되는 단위다.
+-->
+
+
+<!-- 하단은 layout을 relative하게 만들어주는 것이다.  -->
+<!-- <androidx.constraintlayout.widget.ConstraintLayout -->
+
+<!-- LinearLayout은 차례대로 위에서부터 차곡차곡 쌓는 것이다. -->
+
+<!-- 이 xml 파일은 UI부분을 컴퓨터가 이해하도록 xml로 바꾼 것이다.-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    tools:context=".MainActivity">
+
+    <!-- 상단의 orientation은 레이아웃의 쌓을 방향이 어떤건지 말해준다. vertical, horizontal -->
+    <!-- 상단의 gravity는 위젯에 원하는 위치에 정렬해주는 속성이다.-->
+    <!--
+        cf. ========= gravity vs layout_gravity ===============
+            gravity: View 내부의 content의 위치를 설정.
+            layout_gravity: View를 감싸고 있는 LinearLayout과 같은 상위 View를 기준으로 위치를 설정하게 됩니다.
+    -->
+
+    <!-- 아래 @color/textColor은 res/values/colors.xml 파일에 declaration 되어있다. -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_age"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize" />
+
+    <TextView
+        android:id="@+id/tvCalculateMyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Calculate Your"
+        android:textColor="@color/textColor"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <!-- wrap_content는 이 textview가 필요한 만큼 공간으로 만들어준다-->
+    <!-- match_parent는 이 textview의 공간을 최대로 사용할 수 있을 만큼 해준다.-->
+    <!-- padding은 각 element가 가지고 있는 border 사이에 공간을 의미한다. padding의 사이즈가 크면 그 사이 공간이 넓어지는 것 -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:text="Age"
+        android:textColor="@color/ageTextColor"
+        android:background="@color/ageTextBackgroundColor"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="In Minutes"
+        android:textColor="@color/textColor"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnDatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Select Date"
+        android:textColor="@color/selectTextColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/selectBackgroundColor" />
+
+    <TextView
+        android:id="@+id/tvSelectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#844046"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Date"
+        android:textColor="@color/lightGreyTextColor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvSelectedDateInMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="#844046"
+        android:textSize="35sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age In Minutes"
+        android:textColor="@color/lightGreyTextColor"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btSet"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="SET"
+        android:textSize="20dp"/>
+
+</LinearLayout>

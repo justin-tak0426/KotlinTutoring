@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ageButtonSize">80dp</dimen>
+    <dimen name="ageButtonTextSize">20dp</dimen>
+    <dimen name="ageTextPadding">30dp</dimen>
+    <dimen name="ageTextSize">30dp</dimen>
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    하단에 비어져 있는 값을 본인 임의로 채워주세요!
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width=
+    android:layout_height=
+    tools:context=".MainActivity"
+    android:orientation=
+    android:gravity=
+    android:background=
+    android:padding=>
+
+    <TextView
+        android:layout_width=
+        android:layout_height=
+        android:text=
+        android:layout_marginTop=
+        android:textColor=
+        android:textSize=
+        android:textStyle=
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Age"
+        android:textSize="20sp"
+        android:padding="15dp"
+        android:background="@color/textBackground"
+        android:textColor="@color/ageTextColor"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In Minutes"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        />
+    <!--
+        id는 btnDatePicker로 지정해주세요
+        layout_width와 height를 설정해주세요
+        text는 Button으로 해주세요
+        text의 style과 color를 지정해주시고 바탕화면 아무 색을 지정해주세요
+        바탕화면은 (backgroundTint를 쓰시면 됩니다.)
+    -->
+    <Button
+
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/userBirthDay"
+        android:textColor="#844046"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Date"
+        android:textColor="@color/lightGreyTextColor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/userBirthDayInMinutes"
+        android:textColor="#844046"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age In Minutes"
+        android:textColor="@color/lightGreyTextColor"
+        android:textSize="18sp" />
+
+</LinearLayout>
